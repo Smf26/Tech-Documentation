@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+/* ----------Body styling------------ */
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  background-color: rgba(65, 105, 225, 0.8);
+  min-height: 2395vh;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'hd hd hd hd hd hd hd hd hd hd hd hd' 'as as as ma ma ma ma ma ma ma ma ma' 'as as as fo fo fo fo fo fo fo fo fo';
+  -ms-grid-columns: (12)[1fr];
+      grid-template-columns: repeat(1fr, 12);
+  -ms-grid-rows: 12vh auto 10vh;
+      grid-template-rows: 12vh auto 10vh;
+  grid-gap: .1em;
+}
+
+body header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: hd;
+}
+
+body aside {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: as;
+}
+
+body main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 9;
+  grid-area: ma;
+}
+
+body footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 9;
+  grid-area: fo;
+}
+
+div {
+  border: 1px solid;
+}
+
+/* ---------Header styling--------- */
+.main-header {
+  background-color: blue;
+  display: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: rgba(65, 105, 225, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.main-header .navbox {
+  border-style: none;
+  height: 96%;
+}
+
+/* ---------Aside styling---------- */
+aside {
+  border: 1px solid;
+  display: inherit;
+  justify-items: center;
+  padding-top: .2em;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  position: fixed;
+  top: 5.5em;
+  width: 24.4%;
+  height: 87%;
+}
+
+aside .side {
+  width: 96%;
+  height: 98%;
+}
+
+aside .side header {
+  text-align: center;
+  font-size: 1.6vw;
+  border-bottom: 2px solid;
+  margin-bottom: .2em;
+}
+
+aside .side nav .nav-link {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 1vw;
+  padding-left: 1em;
+  border-bottom: .012em solid;
+  line-height: 1.6em;
+}
+
+aside .side nav .nav-link:hover {
+  color: #08dbf7;
+}
+
+aside .side li {
+  font-size: 1vw;
+}
+
+/* ------Main content styling------ */
+main {
+  border: 1px solid;
+  background-color: rgba(65, 105, 225, 0.8);
+  position: absolute;
+  width: 99.7%;
+}
+
+main .main-section {
+  padding-left: 1em;
+  border-bottom: .2em solid;
+  padding-bottom: .8em;
+}
+
+main .main-section header {
+  font-size: 1.8rem;
+  margin-bottom: .8em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+main .main-section h4, main .main-section h5 {
+  font-size: 1.2rem;
+  margin-bottom: .5em;
+}
+
+main .main-section p {
+  margin-bottom: .7em;
+  font-size: .8rem;
+}
+
+main .main-section ul {
+  padding: 1em;
+}
+
+main .main-section li, main .main-section ol {
+  padding-left: 1em;
+}
+
+main .main-section pre {
+  background: #f4f4f4;
+  border: 0.5em solid blue;
+  border-left: 0.3em solid #9ab6d5;
+  color: #666;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5em;
+  width: 80%;
+  overflow: auto;
+  padding: 0 1.5em;
+  display: block;
+  word-wrap: break-word;
+}
+
+main .main-section .span {
+  background-color: black;
+  height: 40px;
+  width: 80%;
+  margin-bottom: 10px;
+  padding: .2em .6em;
+  color: blanchedalmond;
+  font-family: monospace;
+}
+
+main .main-section p > a {
+  text-decoration: none;
+  color: #9ab6d5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .9em;
+}
+
+main .main-section p > a:hover {
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .9em;
+}
+
+main .main-section .blue {
+  color: blue;
+}
+
+main .main-section .red {
+  color: red;
+}
+
+main .main-section .green {
+  color: green;
+}
+
+main .main-section code {
+  color: black;
+}
+
+/* --------Footer styling---------- */
+footer {
+  background-color: blue;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  display: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .footer-box {
+  color: rgba(65, 105, 225, 0.8);
+  border-style: none;
+  height: 96%;
+}
+
+footer .footer-box p > a {
+  text-decoration: none;
+  color: #9ab6d5;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .7rem;
+}
+
+footer .footer-box p > a:hover {
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: .9em;
+}
+
+/* -------------------------------- */
+/* ---------Media Queries---------- */
+@media only screen and (max-width: 640px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'hd hd hd hd hd hd hd hd hd hd hd hd' 'ma ma ma ma ma ma ma ma ma ma ma ma' 'fo fo fo fo fo fo fo fo fo fo fo fo';
+    -ms-grid-columns: (12)[1fr];
+        grid-template-columns: repeat(1fr, 12);
+    -ms-grid-rows: 12vh auto 10vh;
+        grid-template-rows: 12vh auto 10vh;
+    grid-gap: .1em;
+    min-height: 3146vh;
+  }
+  body header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-area: hd;
+  }
+  body aside {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: as;
+  }
+  body main {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-area: ma;
+  }
+  body footer {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-area: fo;
+  }
+  aside {
+    display: none;
+  }
+  main section {
+    padding: .3em;
+  }
+  main section h4, main section h5 {
+    font-size: 2vw;
+    text-align: center;
+  }
+  main section li, main section ol {
+    padding-left: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,225 @@
+// Font import
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+// Variables 
+$primary-color: hsl(210, 100%, 56%); // background
+$secondary-color: blue;
+$maincontent-color: hsla(225, 73%, 57%, .8);
+
+/* ----------Body styling------------ */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  background-color: $maincontent-color;
+  min-height: 2395vh;
+  position: relative;
+  display: grid;
+  grid-template-areas: 
+  'hd hd hd hd hd hd hd hd hd hd hd hd'
+  'as as as ma ma ma ma ma ma ma ma ma'
+  'as as as fo fo fo fo fo fo fo fo fo';
+  grid-template-columns: repeat(1fr, 12);
+  grid-template-rows: 12vh auto 10vh;
+  grid-gap: .1em;
+  header {grid-area: hd;}
+  aside {grid-area: as;}
+  main {grid-area: ma;}
+  footer {grid-area: fo;}
+}
+
+// Development defaults
+div {border: 1px solid;}
+
+/* ---------Header styling--------- */
+.main-header {
+  background-color: $secondary-color;
+  display: inherit;
+  justify-content: center;
+  color: $maincontent-color;
+  position: fixed;
+  width: 100%;
+	z-index: 1;
+  .navbox {
+    border-style: none;
+    height: 96%;
+  }
+}
+/* ---------Aside styling---------- */
+aside {
+  border: 1px solid;
+  display: inherit;
+  justify-items: center;
+  padding-top: .2em;
+  grid-template-rows: 1fr 1fr;
+  position: fixed;
+  top: 5.5em;
+  width: 24.4%;
+  height: 87%;
+  .side {
+    width: 96%;
+    height: 98%;
+    header {
+        text-align: center;
+        font-size: 1.6vw;
+        border-bottom: 2px solid;
+        margin-bottom: .2em;
+      }
+    nav {
+      .nav-link {
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-size: 1vw;
+	      padding-left: 1em;
+        border-bottom: .012em solid;
+        line-height: 1.6em;
+        &:hover {
+          color: hsl(187, 94%, 50%);
+        }
+      }
+    }
+    li {
+      font-size: 1vw;
+    }
+  }
+}
+/* ------Main content styling------ */
+main {
+  border: 1px solid;
+  background-color: $maincontent-color;
+  position: absolute;
+  width: 99.7%;
+  .main-section {
+    padding-left: 1em;
+	  border-bottom: .2em solid;
+    padding-bottom: .8em;
+    header {
+      font-size: 1.8rem;
+	    margin-bottom: .8em;
+	    text-align: center;
+	    text-decoration: underline;
+    }
+    h4, h5 {
+      font-size: 1.2rem;
+	    margin-bottom: .5em;
+    }
+    p {
+      margin-bottom: .7em;
+      font-size: .8rem;
+    }
+    ul {
+      padding: 1em;
+    }
+    li, ol {
+      padding-left: 1em;
+    }
+    pre {
+      background: #f4f4f4;
+      border: .5em solid $secondary-color;
+      border-left: .3em solid hsl(212, 41%, 72%);
+      color: #666;
+      page-break-inside: avoid;
+      font-family: monospace;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5em;
+      width: 80%;
+      overflow: auto;
+      padding: 0 1.5em;
+      display: block;
+      word-wrap: break-word;
+    }
+    .span {
+      background-color: hsl(0, 0%, 0%);
+      height: 40px;
+      width: 80%;
+      margin-bottom: 10px;
+      padding: .2em .6em;
+      color: blanchedalmond;
+      font-family: monospace;
+    }
+    p > a {
+      text-decoration: none;
+      color: hsl(212, 41%, 72%);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: .9em;
+      &:hover {
+        color: hsl(0, 0%, 0%);
+	      font-family: Verdana, Geneva, Tahoma, sans-serif;
+	      font-size: .9em;
+      }
+    }
+    .blue {color: blue;}
+    .red {color: red;}
+    .green {color: green;}
+    code {color: black;}
+  }
+}
+/* --------Footer styling---------- */
+footer {
+  background-color: $secondary-color;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  display: inherit;
+  justify-content: center;
+  .footer-box {
+    color: $maincontent-color;
+    border-style: none;
+    height: 96%;
+    p > a {
+      text-decoration: none;
+      color: hsl(212, 41%, 72%);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: .7rem;
+      &:hover {
+        color: hsl(0, 0%, 0%);
+	      font-family: Verdana, Geneva, Tahoma, sans-serif;
+	      font-size: .9em;
+      }  
+    }
+  }
+}
+/* -------------------------------- */
+
+/* ---------Media Queries---------- */
+@media only screen and (max-width: 640px) {
+  body {
+    //text-align: center;
+    display: grid;
+    grid-template-areas: 
+    'hd hd hd hd hd hd hd hd hd hd hd hd'
+    'ma ma ma ma ma ma ma ma ma ma ma ma'
+    'fo fo fo fo fo fo fo fo fo fo fo fo';
+    grid-template-columns: repeat(1fr, 12);
+    grid-template-rows: 12vh auto 10vh;
+    grid-gap: .1em;
+    min-height: 3146vh;
+    header {grid-area: hd;}
+    aside {grid-area: as;}
+    main {grid-area: ma;}
+    footer {grid-area: fo;}
+  }
+  aside {
+    display: none;
+  }
+  main {
+    section {
+      padding: .3em;
+      h4, h5 {
+        font-size: 2vw;
+        text-align: center;
+      }
+      p {
+        //text-align: center;
+      }
+      li, ol {
+        padding-left: 0;
+      }
+      
+    }
+  }
+}
